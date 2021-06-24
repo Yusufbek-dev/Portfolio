@@ -287,6 +287,7 @@ nav {
     background: var(--clr-green);
     display:block;
     margin:auto;
+    transform:translateX(0%);
 }
 .burger {
     display: none;
@@ -295,7 +296,8 @@ nav {
     width: 30px;
     height: 3px;
     margin:5px;
-    background-color: var(--clr-white); 
+    background-color: var(--clr-white);
+    transition: all 0.3s ease; 
 }
 /* end of nav section */
 
@@ -846,23 +848,32 @@ footer p a span{
     body {
         overflow-x: hidden;
     }
+    nav {
+        width: 100%;
+        position: fixed;
+    }
     .nav__links {
         position: absolute;
-        width: 35vw;
-        right: 0px;
-        height:92vh;
+        right: 0vw;
+        height:50vh;
         top: 8vh;
+        background-color: var(--clr--bg-main);
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--clr--bg-main);
+        width: 40vw;
         transform: translateX(100%);
+        transition:0.5s ease-in;
     }
-    .nav__links {
+    /* .nav__links {
         display: none;
-    }
+    } */
     .nav__links li{
         opacity:0;
+    }
+    .burger {
+        display: block;
+        cursor:pointer;
     }
     .nav__links li a::after {
         display: none;
@@ -870,10 +881,7 @@ footer p a span{
     .nav__links li a {
         color: var(--clr-white);
     }
-    .burger {
-        display: block;
-        margin-left:3rem;
-    }
+    
    /************** end of nav section **************/
 
    /* main section */
@@ -1000,7 +1008,28 @@ footer p a span{
     /* end of contact section */
 
 } 
-
+.nav-active {
+    transform:translateX(0%);
+}
+@keyframes navLinkFade {
+    from {
+        opacity:0;
+        transform:translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform:translateX(0px)
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+   opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
 /*********** mobil zone ********/
  
 @media screen and (max-width:670px){
