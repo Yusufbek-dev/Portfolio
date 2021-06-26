@@ -1,5 +1,5 @@
 /* transfonter.org sayti orqali hamma web bronzuerlar uchun fontni molsashuvchan qilish */
-@font-face {
+/* @font-face {
     font-family: 'Robo';
     src: url('fonts/roboto/Roboto-BlackItalic.eot');
     src: url('fonts/roboto/Roboto-BlackItalic.eot?#iefix') format('embedded-opentype'),
@@ -141,11 +141,11 @@
     font-weight: 100;
     font-style: italic;
     font-display: swap;
-} 
+}  */
 /* recommende colors
 blue-strong: #101861 //stronh blue recomended for background 
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
 /*************************************** variables *****************************************/
 :root {
     /* colors  */
@@ -184,7 +184,7 @@ body {
 *{ 
     margin: 0;
     padding: 0;
-    font-family: 'Robo', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 ::after,
 ::before {
@@ -232,7 +232,8 @@ p {
 /* nav section */
 nav {
     background-color: var(--clr--bg-main);
-    position:sticky;
+    position:fixed;
+    width: 100%;
     top: 0rem;
     z-index: 100;
     display: flex;
@@ -256,7 +257,9 @@ nav {
     width: 40%;
 }
 .nav__links li a {
+    font-family: "roboto";
     font-size: 1rem;
+    font-weight: 500;
     letter-spacing: var(--max-spacing);
     color:var(--clr-grey);
     transition: all 0.3 ease 0s;
@@ -303,7 +306,7 @@ nav {
 
 /* main section */
 #main__section {
-    margin-top: 2.5rem;
+    top: 5.5rem;
     /* background:url(./images/bg_01.png)no-repeat center/cover; */
     /* background-blend-mode: darken; */
     position: relative;
@@ -848,20 +851,16 @@ footer p a span{
     body {
         overflow-x: hidden;
     }
-    nav {
-        width: 100%;
-        position: fixed;
-    }
     .nav__links {
         position: absolute;
         right: 0vw;
-        height:50vh;
+        height:65vh;
         top: 8vh;
         background-color: var(--clr--bg-main);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40vw;
+        width: 100%;
         transform: translateX(100%);
         transition:0.5s ease-in;
     }
@@ -880,6 +879,9 @@ footer p a span{
     }
     .nav__links li a {
         color: var(--clr-white);
+    }
+    #main__section div{
+        margin-top: 3rem;
     }
     
    /************** end of nav section **************/
