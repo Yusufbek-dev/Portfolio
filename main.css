@@ -29,14 +29,13 @@
 
 /* Global style */
 body {
-    width: 100vw;
-    height:100vh;
+    min-width: 100vw;
+    min-height:90vh;
     /* background:rgba(30, 4, 99, 0.7)url(./images/bg_blue.jpg)no-repeat center/cover;
     background-blend-mode: darken; */
     background-color: var(--clr--body);
-    overflow-y:scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: mandatory;
+    
+    overflow-x: hidden;
 }
 *{ 
     margin: 0;
@@ -91,20 +90,28 @@ nav {
     background-color: var(--clr--bg-main);
     position:fixed;
     width: 100%;
-    top: 0rem;
-    z-index: 100;
+    top: 0;
+    left: 0;
+    z-index: 11;
     display: flex;
     justify-content:space-around;
     align-items: center;
     height: 9vh;
     border-bottom:2px solid var(--clr-green);
     box-shadow:0 2px 2px rgba(74, 244, 52, 0.61);
+    animation: Anim-down 0.5s ease-out;
 }
+
 .logo {
     margin-top: 10px;
     color:var(--clr-white);
     cursor:pointer;
+    animation: Anim-up 0.9s ease-in;
+    animation: Anim-up 0.9s ease-in;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
 }
+
 .logo span {
     color:var(--clr-green)
 }
@@ -112,6 +119,9 @@ nav {
     display:flex;
     justify-content: space-around;
     width: 40%;
+    animation: Anim-up 0.9s ease-in;
+    animation-delay: 0.9s;
+    animation-fill-mode: both;
 }
 .nav__links li a {
     font-family: "roboto";
@@ -159,6 +169,40 @@ nav {
     background-color: var(--clr-white);
     transition: all 0.3s ease; 
 }
+@keyframes Anim-down {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes Anim-up {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes Anim-out {
+    from {
+        opacity: 0;
+        visibility:hidden;
+        transform: scale(0.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+}
 /* end of nav section */
 
 /* main section */
@@ -174,24 +218,27 @@ nav {
 }
 .box {
     position: relative;
-    width: 370px;
+    width: 375px;
     height: 450px;
     background:none;
     margin:20px 40px;
-
+    animation: Anim-out 1s ease-out;
+    overflow-x: hidden;
+    visibility:hidden;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
 }
 .box::before {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 370px;
+    width: 375px;
     height: 305px;
     background:transparent;
     border-radius: 50%;
     z-index: 10;
-    box-shadow: 0 100px 0 40px var(--clr--body);
-
+    box-shadow: 0 100px 0 20px var(--clr--body);
 }
 .box::after {
     content: "";
@@ -231,17 +278,31 @@ nav {
 .hello{
     text-shadow: var(--tx-shadow);
     font-weight: 300;
-    color:var(--clr-white);
-}
+    color:var(--clr-white); 
+    animation: Anim-up 0.7s ease-in;
+    animation-delay: 0.9s;
+    animation-fill-mode: both;
+} 
 .name{
     text-shadow: var(--tx-shadow);
     color: var(--clr-white);
     font-weight: 600;
+    animation: Anim-up 0.7s ease-in; 
+    animation-delay: 1.2s;
+    animation-fill-mode: both;
 }
 .job{
     text-shadow: var(--tx-shadow);
     color:var(--clr-white);
     font-weight: 600;
+    animation: Anim-up 0.7s ease-in; 
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+}
+.social {
+    animation: Anim-up 0.7s ease-in; 
+    animation-delay: 1.8s;
+    animation-fill-mode: both;
 }
 .job-main{
     text-shadow: var(--tx-shadow);
@@ -267,7 +328,7 @@ nav {
     color: var(--clr-white);
     box-shadow: 7px 7px 6px rgba(22, 21, 21,.7);
 }
-.btn__seeWork{
+.btn__seeWork {
     position: relative;
     top: 3rem;
     background: linear-gradient(to right, var(--clr-green) 0%, var(--clr-red) 51%, var(--clr-green));
@@ -282,14 +343,16 @@ nav {
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
+    animation: Anim-out 0.7s ease-in; 
+    animation-delay: 2.1s;
+    animation-fill-mode: both;
 }
 
-.btn__seeWork:hover{ 
+.btn__seeWork:hover { 
     box-shadow:10px 10px 10px rgba(56, 180, 7, 0.575);
     background-position: right center;
 }
 /* end of main section */
-
 /* about section*/
 #about__section {
     margin-top:7rem; 
@@ -660,12 +723,12 @@ small {
 /* footer section */
 footer {
     border-top: 3px solid var(--clr-green);
+    background-color: var(--clr--bg-main);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px 0;
+    height: 10vh;
     margin-top: 5rem;
-    background-color: var(--clr--bg-main);
 }
 footer p, strong, i {
     position: relative;
@@ -707,6 +770,7 @@ footer p a span{
         overflow-x: hidden;
     }
     .nav__links {
+        animation: none;
         position: absolute;
         right: 0vw;
         height:65vh;
@@ -726,9 +790,6 @@ footer p a span{
     .burger {
         display: block;
         cursor:pointer;
-    }
-    .nav__links li a {
-        color: var(--clr-white);
     }
     #main__section div{
         margin-top: 3rem;
@@ -761,6 +822,7 @@ footer p a span{
         text-align: center;
     }
     .btn__seeWork {
+        animation: none;
         position: fixed;
         left:-60px;
         top: 60%;

@@ -24,6 +24,7 @@ const navSlide = () => {
 navSlide()
 
 
+
 // nav active
 const navbar = document.querySelector(".nav__links").querySelectorAll("a");
 console.log(navbar);
@@ -37,10 +38,9 @@ navbar.forEach(element => {
 })
 
 // sctroll smooth
-const scroll = new SmoothScroll('.nav__links a[href*="#"]',{
+const scroll = new SmoothScroll('.nav__links a[href*="#"], p a[href*="#"]',  {
   speed:800
 });
-
 // set  date 
 const date = document.getElementById('date');
 date.innerHTML = new Date().getFullYear()
