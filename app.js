@@ -23,8 +23,6 @@ const navSlide = () => {
 }
 navSlide()
 
-
-
 // nav active
 const navbar = document.querySelector(".nav__links").querySelectorAll("a");
 console.log(navbar);

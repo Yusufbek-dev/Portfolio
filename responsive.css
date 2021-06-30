@@ -1,0 +1,518 @@
+
+/*================ tablet zone =================*/
+@media screen and (max-width:992px) {
+  /*========== nav section ===============*/
+  body {
+      overflow-x: hidden;
+  }
+  .nav__links {
+      animation: none;
+      position: absolute;
+      right: 0vw;
+      height:65vh;
+      top: 8vh;
+      background-color: var(--clr--bg-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition:0.5s ease-in;
+  }
+  
+  .nav__links li{
+      opacity:0;
+  }
+  .burger {
+      display: block;
+      cursor:pointer;
+  }
+  #main__section div{
+      margin-top: 3rem;
+  }
+ /*=========== end of nav section =============*/
+
+ /*============== main section =============*/
+  .box{
+      display: none;
+  }
+  .hello {
+      text-align: center;
+      margin-bottom: 1.5rem;
+  }
+  .name { 
+      margin-bottom: 1.5rem;
+      text-align: center;
+  }
+  .job {
+      line-height: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+  }
+  .job-main {
+      margin-bottom: 1.5rem;
+      text-align: center;
+  }
+  .social {
+      text-align: center;
+  }
+  .btn__seeWork {
+      animation: none;
+      position: fixed;
+      left:-60px;
+      top: 60%;
+      transform: rotate(270deg);
+  }
+  .btn__seeWork:hover {
+      transform: rotate(270deg);
+  }
+  /*=========== end of main section ==============*/
+
+  /*============== about section ==============*/
+  .about__container {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 6rem;
+  }
+  .btn__about {
+      display: inline-block;
+  }
+  /*============ end of about section ===========*/
+
+  /*============== skills section =============*/
+  .skills__title {
+      margin-left: 6rem;
+  }
+  .wrap {
+      margin: 0 7rem;
+      flex-direction: column;
+      align-items: center;
+  }
+  .bar span {
+      width:100%;
+  }
+  small {
+      left: 95%;
+  }
+  .wrap .languages {
+     margin:1rem 5rem;
+     align-items: center;
+  }
+  .wrap .languages div {
+      padding: none;
+      background:none;
+  }
+  .wrap .languages div h5 {
+      background: var(--clr--bg-main);
+      padding: 5px;
+      width:400px;
+  }
+  /*============ end of skills section ============*/
+
+  /*============== service section ============*/
+  #service__section>h5 {
+      line-height: 1.6;
+      padding: 0 60px;
+  }
+  .service__container {
+      flex-direction: column;
+      margin-bottom: 1rem;
+  }
+  .service__container .service__type {
+      margin: 1rem 5rem;
+  }
+  /*============== end of service section ==============*/ 
+
+  /*========= contact section ==========*/
+  .contact__container {
+      display: block;
+  }
+  .contact__form {
+      display: block;
+      max-width:none;
+      margin: 2rem 7rem;
+  }
+  .contact__info {
+      margin: 4rem 7rem 0;
+  }
+  .contact__info>h4 {
+      text-align: center;
+  }
+  .contact__form .text-box {
+      display:block;
+      width: 100%;  
+      height:40px;
+      margin-bottom: 1rem;
+  }
+  .contact__form textarea {
+      width:100%;
+      margin-top: 0.5rem;
+  }
+  .service__included {
+      margin: 0 8rem;
+  }
+} 
+/*============= end of tablet zone =============*/
+
+/* =============================================== */
+.nav-active {
+  transform:translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+      opacity:0;
+      transform:translateX(50%);
+  }
+  to {
+      opacity: 1;
+      transform:translateX(0px)
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+ opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* =============================================== */
+/*=============== mobil zone ==============*/
+
+@media screen and (max-width:670px){
+  body {
+      overflow-x: hidden;
+  }
+  /*============== main ===============*/
+  .name { 
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+  }
+  .job {
+      font-size: 2.5rem;
+      line-height: 5.5rem;
+  }
+  .social {
+      text-align: center;
+  }
+  .btn__seeWork {
+      display: none;
+  }
+  /*============= about ============*/
+  .about__photo {
+      display: none;
+  }
+  .btn__about {
+      display: none;
+  }
+  /*============ skills ==============*/
+  .skills__title {
+      font-size: 1.4rem;
+      margin:0 0 2rem;
+  }
+  .wrap .languages div{
+      margin-bottom: -5rem;
+  }
+  .service__title {
+      font-size: 1.5rem;
+  }
+  .service__container .service__type {
+      margin: 1rem 3rem;
+
+  }
+  .service__container .service__type p{
+      font-size: 1.5rem;
+  }
+  .service__type:hover{
+      transform:none;
+      box-shadow:none;
+  }
+  .service__type h4 {
+      font-size: 2rem;
+  }
+  .continue-btn {
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+  .service__included {
+      margin: 0 6rem; 
+  }
+  .service__included p {
+      font-size: 1.5rem;
+  }
+  /*================ contact ===============*/
+  .contact__container {
+      margin-top: -2rem;
+      font-size: 1.1rem;
+  }
+  .contact__info h4{
+      font-size: 2rem;
+  }
+  .contact__info p{
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 1.5;
+  }
+  .contact__info div{
+      display: block;
+      font-size: 1.2rem;
+  }
+  .contact__info div sup{
+      font-size: 0.8rem;
+  }
+  .contact__title {
+      font-size: 1.6rem;
+      font-weight: 600;
+  }
+  .send-btn {
+      font-size: 1.2rem;
+      width: 100%;
+  }
+  footer {
+      flex-direction: column;
+      width: 100%;
+      padding: 30px 0;
+  }
+  footer div {
+      margin: 1.5rem 0;
+  }
+}
+/*============= sm phone ================*/
+@media screen and (max-width:570px) {
+  .name {
+      line-height: 1.6;
+  }
+  /*============== about sm ============*/
+  .about__head {
+      display: none;
+  }
+  .about__container {
+      margin: 0 1rem;
+  }
+  .about__container p{
+      text-indent: 40px;
+      text-align: start;
+      padding: 5px 0;
+  }
+  /*============== skills sm ==============*/
+  .skills__title {
+      text-align: center;
+      margin: 1rem 0;
+  }
+  .wrap {
+      margin: 0 1rem;
+  }
+  .wrap .languages {
+      margin: 1rem  0 1rem;
+  }
+  .languages h4 {
+      margin: 0 0 -0.3rem;
+  }
+  .wrap .languages div h5 {
+      margin: 0 2rem;
+      width:380px;
+  }
+  /*============ service sm ===========*/
+  #service__section>h5{
+      padding: 0;
+  }
+  .service__container .service__type {
+      margin: 1rem -2rem;
+  }
+  .service__included {
+      margin:1rem 1rem;
+  }
+  /*============ contact sm =============*/
+  #contact__section {
+      display: inline-block;
+
+      align-items: center;
+  }
+  .contact__info{
+      position: relative;
+      padding-left: 0;
+      text-align: start;
+      top: 1.5rem;
+      margin: 1.5rem 1rem;
+  }
+  .contact__info h4 {
+      margin-bottom: -0.5rem;
+  }
+  .contact__info p {
+      text-align: start;
+  }
+  .contact__form {
+      margin: 1rem 3.5rem;
+      margin-left: 1rem;
+  }
+  .contact__title {
+      margin-top: 5rem;
+  }
+  footer div {
+      margin-top:2rem;
+  }
+}
+
+/*============= mobil zone ============*/
+
+@media screen and (max-width:670px){
+  /* main */
+  .name { 
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+  }
+  .job {
+      font-size: 2.5rem;
+      line-height: 5.5rem;
+  }
+  .social {
+      text-align: center;
+  }
+  .btn__seeWork {
+      display: none;
+  }
+  /*============== about ============*/
+  .about__photo {
+      display: none;
+  }
+  .btn__about {
+      display: none;
+  }
+  /*============= skills ==============*/
+  .skills__title {
+      font-size: 1.4rem;
+      margin:0 0 2rem;
+  }
+  .wrap .languages div{
+      margin-bottom: -5rem;
+  }
+  .service__title {
+      font-size: 1.5rem;
+  }
+  .service__container .service__type {
+      margin: 1rem 3rem;
+
+  }
+  .service__container .service__type p{
+      font-size: 1.5rem;
+  }
+  .service__type:hover{
+      transform:none;
+      box-shadow:none;
+  }
+  .service__type h4 {
+      font-size: 2rem;
+  }
+  .continue-btn {
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+  .service__included {
+      margin: 0 6rem; 
+  }
+  .service__included p {
+      font-size: 1.5rem;
+  }
+  /*============ contact ===============*/
+  .contact__container {
+      margin-top: -2rem;
+      font-size: 1.1rem;
+  }
+  .contact__info h4{
+      font-size: 2rem;
+  }
+  .contact__info p{
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 1.5;
+  }
+  .contact__info div{
+      display: block;
+      font-size: 1.2rem;
+  }
+  .contact__info div sup{
+      font-size: 0.8rem;
+  }
+  .contact__title {
+      font-size: 1.6rem;
+      font-weight: 600;
+  }
+  .send-btn {
+      font-size: 1.2rem;
+      width: 100%;
+  }
+  footer {
+      flex-direction: column;
+  }
+  footer div {
+      margin: 1.5rem 0;
+  }
+}
+/*=========== sm phone ============*/
+@media screen and (max-width:570px) {
+  .name {
+      line-height: 1.6;
+  }
+  /*=========== about sm ==============*/
+  .about__head {
+      display: none;
+  }
+  .about__container {
+      margin: 0 1rem;
+  }
+  .about__container p{
+      text-indent: 40px;
+      text-align: start;
+      padding: 5px 0;
+  }
+  /*============= skills sm =============*/
+  .skills__title {
+      text-align: center;
+      margin: 1rem 0;
+  }
+  .wrap {
+      margin: 0 1rem;
+  }
+  .wrap .languages {
+      margin: 1rem  0 1rem;
+  }
+  .languages h4 {
+      margin: 0 0 -0.3rem;
+  }
+  .wrap .languages div h5 {
+      margin: 0 2rem;
+      width:380px;
+  }
+  /*============= service sm ==============*/
+  #service__section>h5{
+      padding: 0;
+  }
+  .service__container .service__type {
+      margin: 1rem -2rem;
+  }
+  .service__included {
+      margin:1rem 1rem;
+  }
+  /*============== contact sm =============*/
+  .contact__info{
+      position: relative;
+      padding-left: 0;
+      text-align: start;
+      top: 1.5rem;
+      margin: 1.5rem 1rem;
+  }
+  .contact__info h4 {
+      margin-bottom: -0.5rem;
+  }
+  .contact__info p {
+      text-align: start;
+  }
+  .contact__form {
+      margin: 1rem 3.5rem;
+      margin-left: 1rem;
+  }
+  .contact__title {
+      margin-top: 5rem;
+  }
+}
