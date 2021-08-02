@@ -7,7 +7,7 @@
     --clr-black:#000;
     --clr-white:#fff;
     /* body color */
-    --clr--body:#101687;
+    --clr--body:#c6c6cc;
     /* main background color */
     --clr--bg-main:rgba(0, 0, 0, 0.801);
     /*banner text, 
@@ -16,7 +16,7 @@
     --clr-red:#bb0404;
     /* this used nav underline, all buttons, 
     service text and other things */
-    --clr-green:rgb(76, 244, 54);
+    --clr-green:rgb(9, 62, 209);
     /* p text color */
     --clr-grey:#adadad;
     /* main shadow */
@@ -185,7 +185,7 @@ nav {
     animation: Anim-out 1s ease-out;
     overflow-x: hidden;
     visibility:hidden;
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 .box::before {
@@ -218,7 +218,7 @@ nav {
   left: 0;
   width: 360px;
   height: 330px;
-  background:var(--clr-white);
+  background:var(--clr-green);
   overflow: hidden;
   border-radius: 50%;
   border: 7px solid var(--clr-black);
@@ -238,14 +238,14 @@ nav {
 .hello{
     text-shadow: var(--tx-shadow);
     font-weight: 300;
-    color:var(--clr-white); 
+    color:var(--clr-black); 
     animation: Anim-up 0.7s ease-in;
     animation-delay: 0.9s;
     animation-fill-mode: both;
 } 
 .name{
     text-shadow: var(--tx-shadow);
-    color: var(--clr-white);
+    color: var(--clr-black);
     font-weight: 600;
     animation: Anim-up 0.7s ease-in; 
     animation-delay: 1.2s;
@@ -253,7 +253,7 @@ nav {
 }
 .job{
     text-shadow: var(--tx-shadow);
-    color:var(--clr-white);
+    color:var(--clr-black);
     font-weight: 600;
     animation: Anim-up 0.7s ease-in; 
     animation-delay: 1.5s;
@@ -338,7 +338,7 @@ nav {
 .about__head {
     text-align: center;
     margin-top: 1.5rem;
-    color:var(--clr-white);
+    color:var(--clr-black);
     font-size:1.5rem;
     font-weight:500;
     letter-spacing:var(--max-spacing);
@@ -405,7 +405,7 @@ figure {
 .skills__title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color:var(--clr-white);
+    color:var(--clr-black);
 }
 .wrap {
     margin-top:3.5rem;
@@ -414,12 +414,12 @@ figure {
 }
 .bar h3 {
     font-size:1rem;
-    color:var(--clr-white);
+    color:var(--clr-black);
     font-weight: 500;
     letter-spacing: var(--max-spacing);
 }
 .bar {
-    color:var(--clr-white);
+    color:var(--clr-black);
     letter-spacing: var(--max-spacing);
     font-weight:500;
     font-size:1rem;
@@ -473,13 +473,13 @@ small {
 }
 .languages {
     letter-spacing: var(--max-spacing);
-    color: var(--clr-white);
     display: flex;
     flex-direction: column;
     /* background-color:var(--clr--bg-main);
     border-top-left-radius: 30px; */
 }
 .languages h4 {
+    color: var(--clr-black);
     margin-bottom: 2rem;
 }
 .languages div {
@@ -489,6 +489,7 @@ small {
     background:var(--clr--bg-main);
 }
 .languages div h5 {
+    color: var(--clr-white);
     margin-bottom: 2rem;
 }
 .languages img {
@@ -527,7 +528,7 @@ small {
     font-size: 1rem;
     text-shadow:var(--tx-shadow);
     margin-bottom: 2rem;
-    color:var(--clr-white);  
+    color:var(--clr-black);  
 }
 .service__type h4 {
     display: inline-block;
@@ -552,7 +553,7 @@ small {
     letter-spacing: 1.5;
 }
 .continue-btn:hover {
-    background-color:#2aa11a;
+    background-color:#311597;
 }
 .service__included {
     margin: 2rem 5rem 0;
@@ -588,17 +589,17 @@ small {
     align-items: center;
 }
 .contact__info {
-    color: var(--clr-white);
+    color: var(--clr-black);
     max-width: 500px;
     line-height: 65px;
     padding-left: 60px;
 }
 .contact__info p {
     line-height: normal;
-    color:var(--clr-grey)
+    color:var(--clr-black)
 }
 .contact__info i {
-    color: var(--clr-white);
+    color: var(--clr-black);
     margin-right: 20px;
     font-size: 1.8rem;}
 
@@ -610,7 +611,7 @@ small {
     flex: 1;
 }
 .contact__title {
-    color:var(--clr-white);
+    color:var(--clr-black);
     text-align: center;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -733,11 +734,11 @@ footer p a span{
     from {
         opacity: 0;
         visibility:hidden;
-        transform: scale(0.1);
+        transform: scale(0.1) translateY(35rem);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(0);
         visibility: visible;
     }
 }
